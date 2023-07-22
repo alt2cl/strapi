@@ -12,6 +12,7 @@ const localDatabaseConfig = {
     database: "railway",
     user: "postgres",
     password: "postgres",
+    ssl: false,
   },
   debug: false,
 };
