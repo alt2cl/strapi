@@ -16,6 +16,7 @@
     "@strapi/strapi": "4.8.2",
     "node-fetch": "^3.3.1",
     "pg": "8.8.0",
+    "pg-connection-string": "^2.6.1",
     "shelljs": "^0.8.5",
     "sqlite3": "^5.1.6",
     "typescript": "^5.1.5"
