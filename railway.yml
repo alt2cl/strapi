@@ -1,0 +1,11 @@
+# railway.yml
+
+environments:
+  - name: pr_environment
+    branch: main
+    cleanup: true
+    commands:
+      - name: setup
+        command: npm ci
+      - name: test
+        command: npm run test
