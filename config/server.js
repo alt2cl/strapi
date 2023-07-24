@@ -7,4 +7,7 @@ module.exports = ({ env }) => ({
   app: {
     keys: env.array("APP_KEYS"),
   },
+  https: {
+    rejectUnauthorized: false, // Desactiva la verificación de certificados SSL
+  },
 });
