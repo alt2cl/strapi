@@ -1,36 +1,22 @@
-require("dotenv").config();
-const parse = require("pg-connection-string").parse;
-const pgconfig = parse(process.env.DATABASE_URL);
+// database.js
 
-const isProduction = process.env.NODE_ENV === "production";
-
-const localDatabaseConfig = {
-  client: "postgres",
-  connection: {
-    host: "127.0.0.1",
-    port: 5432,
-    database: "railway",
-    user: "postgres",
-    password: "postgres",
-    ssl: false,
-  },
-  debug: false,
-};
-
-const railwayDatabaseConfig = {
-  client: "postgres",
-  connection: {
-    host: pgconfig.host,
-    port: pgconfig.port,
-    database: pgconfig.database,
-    user: pgconfig.user,
-    password: pgconfig.password,
-    ssl: {
-      rejectUnauthorized: isProduction,
+module.exports = ({ env }) => ({
+  defaultConnection: "default",
+  connections: {
+    default: {
+      connector: "bookshelf",
+      settings: {
+        client: "postgres",
+        host: env("DATABASE_HOST", "127.0.0.1"),
+        port: env.int("DATABASE_PORT", 5432),
+        database: env("DATABASE_NAME", "railway"),
+        username: env("DATABASE_USERNAME", "postgres"),
+        password: env("DATABASE_PASSWORD", "postgres"),
+        ssl: env.bool("DATABASE_SSL_SELF", false),
+      },
+      options: {
+        debug: env.bool("DEBUG", false),
+      },
     },
   },
-};
-
-module.exports = {
-  connection: isProduction ? railwayDatabaseConfig : localDatabaseConfig,
-};
+});
