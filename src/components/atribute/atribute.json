@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_atribute_atributes",
+  "info": {
+    "displayName": "atribute"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "titlebutton": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "cover": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

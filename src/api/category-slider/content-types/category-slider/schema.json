@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category_sliders",
+  "info": {
+    "singularName": "category-slider",
+    "pluralName": "category-sliders",
+    "displayName": "Category Slider"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "sliders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::slider.slider",
+      "mappedBy": "category_sliders"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_nav_navigations",
+  "info": {
+    "displayName": "navigation"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "_blank",
+        "_self"
+      ]
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
