@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_nav_sociallinks",
+  "info": {
+    "displayName": "sociallinks"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "red": {
+      "type": "enumeration",
+      "enum": [
+        "instagram",
+        "facebook",
+        "twitter",
+        "linkedin"
+      ]
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

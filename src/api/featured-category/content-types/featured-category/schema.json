@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "featured_categories",
+  "info": {
+    "singularName": "featured-category",
+    "pluralName": "featured-categories",
+    "displayName": "Featured Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "mappedBy": "featured_categories"
+    },
+    "order": {
+      "type": "integer",
+      "default": 1
+    }
+  }
+}

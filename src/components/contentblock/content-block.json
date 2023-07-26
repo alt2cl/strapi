@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_contentblock_content_blocks",
+  "info": {
+    "displayName": "content block"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "cover": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "titlebutton": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": [
+        "leftimage",
+        "rightimage",
+        "hideimage"
+      ]
+    },
+    "backgroud": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
