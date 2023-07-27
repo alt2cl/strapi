@@ -1,7 +1,8 @@
 {
   "collectionName": "components_contentblock_content_blocks",
   "info": {
-    "displayName": "content block"
+    "displayName": "content block",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -15,14 +16,15 @@
       "type": "richtext"
     },
     "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "titlebutton": {
       "type": "string"
@@ -37,10 +39,6 @@
         "rightimage",
         "hideimage"
       ]
-    },
-    "backgroud": {
-      "type": "boolean",
-      "default": false
     }
   }
 }
