@@ -13,23 +13,23 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
-      "type": "string"
+      "type": "text",
+      "required": true
     },
     "price": {
-      "type": "float"
+      "type": "float",
+      "required": true
     },
     "cover": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "gallery": {
@@ -57,7 +57,20 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true
+    },
+    "featured_sidebar": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::featured-sidebar.featured-sidebar",
+      "inversedBy": "products"
+    },
+    "offer": {
+      "type": "boolean"
+    },
+    "oldprice": {
+      "type": "float"
     }
   }
 }
