@@ -30,6 +30,27 @@
       "type": "component",
       "repeatable": true,
       "component": "atribute.atribute"
+    },
+    "cols": {
+      "type": "enumeration",
+      "enum": [
+        "cols-2",
+        "cols-3",
+        "cols-4"
+      ]
+    },
+    "order": {
+      "type": "enumeration",
+      "enum": [
+        "pos-1",
+        "pos-2",
+        "pos-3",
+        "pos-4",
+        "pos-5",
+        "pos-6",
+        "pos-7",
+        "pos-8"
+      ]
     }
   }
 }

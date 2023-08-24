@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "featured_sidebars",
+  "info": {
+    "singularName": "featured-sidebar",
+    "pluralName": "featured-sidebars",
+    "displayName": "Featured Sidebar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "featured_sidebar"
+    }
+  }
+}

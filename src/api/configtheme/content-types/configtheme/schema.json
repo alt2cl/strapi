@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "configthemes",
+  "info": {
+    "singularName": "configtheme",
+    "pluralName": "configthemes",
+    "displayName": "Configtheme",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titlesite": {
+      "type": "string"
+    },
+    "descriptionsite": {
+      "type": "string"
+    },
+    "logosite": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "primarycolor": {
+      "type": "string"
+    },
+    "secondarycolor": {
+      "type": "string"
+    },
+    "bgmenu": {
+      "type": "string"
+    },
+    "colorfontmenu": {
+      "type": "string"
+    },
+    "bgfooter": {
+      "type": "string"
+    }
+  }
+}

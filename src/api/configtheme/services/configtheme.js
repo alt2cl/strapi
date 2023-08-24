@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * config service
+ * configtheme service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::config.config');
+module.exports = createCoreService('api::configtheme.configtheme');
