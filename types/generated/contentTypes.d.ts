@@ -995,13 +995,41 @@ export interface ApiMenuMenu extends Schema.CollectionType {
     logo: Attribute.Media;
     description: Attribute.String;
     sociallinks: Attribute.Component<'nav.sociallinks', true>;
-    rank: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::menu.menu', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::menu.menu', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPagePage extends Schema.CollectionType {
+  collectionName: 'pages';
+  info: {
+    singularName: 'page';
+    pluralName: 'pages';
+    displayName: 'Pages';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    titlesection: Attribute.String;
+    titlepage: Attribute.String;
+    description: Attribute.Text;
+    subtitle: Attribute.String;
+    cover: Attribute.Media;
+    content: Attribute.Blocks;
+    slug: Attribute.UID<'api::page.page', 'titlepage'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -1163,6 +1191,7 @@ declare module '@strapi/types' {
       'api::featured-category.featured-category': ApiFeaturedCategoryFeaturedCategory;
       'api::featured-sidebar.featured-sidebar': ApiFeaturedSidebarFeaturedSidebar;
       'api::menu.menu': ApiMenuMenu;
+      'api::page.page': ApiPagePage;
       'api::post.post': ApiPostPost;
       'api::product.product': ApiProductProduct;
       'api::slider.slider': ApiSliderSlider;

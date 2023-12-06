@@ -43,9 +43,6 @@
       "type": "component",
       "repeatable": true,
       "component": "nav.sociallinks"
-    },
-    "rank": {
-      "type": "integer"
     }
   }
 }
