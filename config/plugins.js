@@ -21,4 +21,11 @@ module.exports = ({ env }) => ({
   "drag-drop-content-types": {
     enabled: true,
   },
+  "import-export-entries": {
+    enabled: true,
+    config: {
+      // See `Config` section. https://cms.cafemas.cl/
+      serverPublicHostname: "https://cms.cafemas.cl", // default: "".
+    },
+  },
 });
